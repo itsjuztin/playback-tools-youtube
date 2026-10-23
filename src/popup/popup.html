@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto HD for YouTube</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-title">Playback Tools for YouTube</span>
+        <span class="brand-sub" id="currentTierBadge">Detecting stream...</span>
+      </div>
+    </header>
+
+    <!-- Quality Target Selection -->
+    <div class="control-box">
+      <div class="box-title">Target resolution</div>
+      <div class="tier-options">
+        <button class="tier-btn active" data-ceiling="max">
+          <span class="tier-name">Maximum available (4K / 8K)</span>
+          <span class="tier-tag">Default</span>
+        </button>
+
+        <button class="tier-btn" data-ceiling="hd2160">
+          <span class="tier-name">4K (2160p)</span>
+        </button>
+
+        <button class="tier-btn" data-ceiling="hd1440">
+          <span class="tier-name">1440p (QHD)</span>
+        </button>
+
+        <button class="tier-btn" data-ceiling="hd1080">
+          <span class="tier-name">1080p (FHD)</span>
+        </button>
+      </div>
+
+      <div class="available-streams-row">
+        <span class="avail-label">Available on video:</span>
+        <div class="available-tiers" id="availableTiersList"></div>
+      </div>
+    </div>
+
+    <!-- Clean View Options -->
+    <div class="control-box">
+      <div class="box-title">Clean view</div>
+      <div class="toggle-list">
+        <label class="toggle-row">
+          <span class="toggle-title">Hide YouTube Shorts</span>
+          <input type="checkbox" id="toggleShorts" class="toggle-switch" checked>
+        </label>
+
+        <label class="toggle-row">
+          <span class="toggle-title">Hide end screen cards</span>
+          <input type="checkbox" id="toggleEndCards" class="toggle-switch" checked>
+        </label>
+      </div>
+    </div>
+
+    <!-- Footer Feedback Link -->
+    <footer class="app-footer-row">
+      <a href="https://github.com/itsjuztin/playback-tools-youtube/issues" target="_blank" class="footer-link">Report an issue / feedback</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
